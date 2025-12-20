@@ -1,27 +1,17 @@
+from rich import print
+
+
 def insertionsort(head: list):
-    sorted_list = []
-    sorted_list.append(head.pop())
-    print(sorted_list)
-    for _ in range(len(head)):
-        steps = 0
-        limit = len(sorted_list)
-        current = head.pop()
-        ind = 0
-        while steps < limit:
-            print(f"sefr : {steps}")
-            if sorted_list[steps] < current:
-                ind = steps + 1
-                print(f"paeen : {ind}")
-            else:
-                ind = steps
-                print(f"bala : {ind}")
+    for i, num in enumerate(head):
+        limit = i + 1
+        step = 0
+        while step < limit:
+            if num < head[step]:
+                head[i], head[step] = head[step], head[i]
+                print(f"[red]{head}[/red]")
+            step += 1
 
-            steps += 1
-
-        sorted_list.insert(ind, current)
-        print(f"[red]{sorted_list}[/red]")
-
-    print(f"[blue]{sorted_list}[/blue]")
+    print(f"[blue]{head}[/blue]")
 
 
 insertionsort(head=[4, 2, 3, 5, 1])
