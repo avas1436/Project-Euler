@@ -1,14 +1,11 @@
 def abundant(num: int):
-    divisors = set()
+    total = 0
     for i in range(1, ((num // 2) + 1)):
         if num % i == 0:
-            divisors.add(i)
-
-    total = sum(divisors)
-    if total >= num:
-        return total
-    else:
-        return False
+            total += i
+            if total > num:
+                return True
+    return False
 
 
 # print(abundant(12))
