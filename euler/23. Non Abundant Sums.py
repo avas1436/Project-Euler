@@ -38,3 +38,9 @@ def solve(num_set: set):
             total += k
 
     return total
+
+
+if __name__ == "__main__":
+    nums = abundant_tuple()
+    answare = solve(nums)
+    print(answare)
