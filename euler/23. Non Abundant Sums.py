@@ -2,8 +2,11 @@ import time
 
 
 def abundant(num: int):
-    total = 0
-    for i in range(1, ((num // 2) + 1)):
+    total = 1
+    if num % 2 == 0:
+        total += 2 + (num / 2)
+
+    for i in range(3, ((num // 3) + 1)):
         if num % i == 0:
             total += i
             if total > num:
@@ -11,7 +14,7 @@ def abundant(num: int):
     return False
 
 
-# print(abundant(12))
+# print(abundant(28))
 
 
 def abundant_tuple(start: int = 1, end: int = 28124):
