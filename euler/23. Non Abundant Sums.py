@@ -3,9 +3,14 @@ def abundant(num: int):
     for i in range(1, ((num // 2) + 1)):
         if num % i == 0:
             divisors.add(i)
-        print(f"for i = {i}, divisors : {divisors}")
 
-    return sum(divisors)
+    total = sum(divisors)
+    if total >= num:
+        return total
+    else:
+        return False
 
 
-print(abundant(12))
+# print(abundant(12))
+#
+#
