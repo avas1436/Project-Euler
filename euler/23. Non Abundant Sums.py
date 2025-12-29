@@ -1,3 +1,6 @@
+import time
+
+
 def abundant(num: int):
     total = 0
     for i in range(1, ((num // 2) + 1)):
@@ -41,6 +44,14 @@ def solve(num_set: set):
 
 
 if __name__ == "__main__":
+    start_abundat = time.process_time()
     nums = abundant_tuple()
+    end_abundat = time.process_time() - start_abundat
+    print(f"Making abundant tuple take {end_abundat} seconds")
+
+    start_answare = time.process_time()
     answare = solve(nums)
-    print(answare)
+    end_answare = time.process_time() - start_answare
+    print(f"Proccess Solve function in {end_answare} seconds")
+
+    print(f"The answare is : {answare}")
