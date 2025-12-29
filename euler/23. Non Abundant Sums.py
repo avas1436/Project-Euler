@@ -28,7 +28,7 @@ def abundant_tuple(start: int = 1, end: int = 28124):
 # print(n)
 
 
-def solve(num_set: set):
+def solve(num_set: tuple):
     nums = {i: True for i in range(1, 28124)}
     for i, num_1 in enumerate(num_set):
         for num_2 in num_set[i:]:
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     print(f"Making abundant tuple take {end_abundat} seconds")
 
     start_answare = time.process_time()
-    answare = solve(nums)
+    answare = solve(num_set=nums)
     end_answare = time.process_time() - start_answare
     print(f"Proccess Solve function in {end_answare} seconds")
 
