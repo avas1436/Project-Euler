@@ -12,5 +12,15 @@ def abundant(num: int):
 
 
 # print(abundant(12))
-#
-#
+
+
+def abundant_set(start: int = 1, end: int = 28124):
+    abundant_ls = set()
+    for i in range(start, end):
+        if abundant(i):
+            abundant_ls.add(i)
+    return abundant_ls
+
+
+n = abundant_set()
+print(n)
