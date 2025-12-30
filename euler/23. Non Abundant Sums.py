@@ -8,8 +8,8 @@ def abundant(num: int):
             total += i
             if num / i != i:
                 total += num / i
-            if total > num:
-                return True
+        if total > num:
+            return True
     return False
 
 
