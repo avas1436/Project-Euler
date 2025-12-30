@@ -17,11 +17,7 @@ def abundant(num: int):
 
 
 def abundant_tuple(start: int = 1, end: int = 28124):
-    abundant_ls = []
-    for i in range(start, end):
-        if abundant(i):
-            abundant_ls.append(i)
-    return tuple(abundant_ls)
+    return tuple(i for i in range(start, end) if abundant(i))
 
 
 # n = abundant_tuple()
